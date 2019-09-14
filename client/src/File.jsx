@@ -13,6 +13,7 @@ export default class FileUpload extends Component {
         let {imageFile} = this.state
         let fd = new FormData()
         fd.append('sampleFile', imageFile)
+
         window.fetch('http://localhost:4000/upload', {
             method: "POST",
             body: fd
@@ -20,11 +21,12 @@ export default class FileUpload extends Component {
         .then(response => response.json())
         .then(result => {console.log('result is ', result)})
         .catch(error => {console.log('error ', error)})
+        
     }
 
     handleFileChange = (event) => {
         const file = event.target.files[0]
-  
+
         LoadImage(
             file,
             (img) => {
@@ -43,6 +45,7 @@ export default class FileUpload extends Component {
                 maxHeight: 200
             }
         )  
+
     }
 
     render() {
