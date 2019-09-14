@@ -22,7 +22,7 @@ app.use(cors())
 
 app.get('/', (req, res) => res.send('Hello World!'))
 app.post('/upload', upload.single('sampleFile'), function (req, res, next) {
- 
+  console.log('here isfile ', req.file)
     res.send({message:"file uploaded"})
   })
 

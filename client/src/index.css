@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.previewfile  {
+  max-width: 200px;
+  max-height: 200px;
+}
